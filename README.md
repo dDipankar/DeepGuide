@@ -22,15 +22,18 @@ Assuming you have installed the prerequisites in a conda environment called deep
 conda activate deepguide
 python DetectAndScore_cas12a.py path_of_fasta_file
 ```
-See data/seq_fa.fasta for FASTA format. Just remember that the program needs at least 32 nucleotides to fit the full target
+See data/seq_fa.fasta for FASTA format. Just remember that the program needs at least 32 nucleotides to fit the full target.
 
 ```
 context (1nt) -- PAM (4nt, TTTV) -- target (25nt) -- context (2nt)
-
 ```
+
+You will get an output file called activity_score_cas12a.csv in data directory. This file will contain the predicted cutting score by DeepGuide for each guide.
+
 ## Example run
 ### For cas12a
 ```
 conda activate deepguide
 python DetectAndScore_cas12a.py ../data/seq_fa.fasta
 ```
+Then you will get an output file called activity_score_cas12a.csv in data directory.
