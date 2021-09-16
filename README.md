@@ -14,3 +14,23 @@ The easiest way to get the needed prerequisites to run DeepGuide is through cond
 ```
 conda activate DeepGuide
 ```
+## Runing the software
+### For cas12a
+Assuming you have installed the prerequisites in a conda environment called deepguide, you can run the software using for cas12a guides using following command
+
+```
+conda activate deepguide
+python DetectAndScore_cas12a.py path_of_fasta_file
+```
+See data/seq_fa.fasta for FASTA format. Just remember that the program needs at least 32 nucleotides to fit the full target
+
+```
+context (1nt) -- PAM (4nt, TTTV) -- target (25nt) -- context (2nt)
+
+```
+## Example run
+### For cas12a
+```
+conda activate deepguide
+python DetectAndScore_cas12a.py ../data/seq_fa.fasta
+```
