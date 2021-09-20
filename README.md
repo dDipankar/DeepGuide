@@ -10,10 +10,12 @@ Genome-wide functional screens enable the prediction of high activity CRISPR-Cas
 - numpy 1.18.5
 - pandas 1.0.5
 ## Installation Guide
-The easiest way to get the needed prerequisites to run DeepGuide is through conda. If you have conda installed already you can skip this step, otherwise go to [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html) to learn how to install conda on your system. Once conda is correctly installed. You need to install the DeepGuide requirements with
+The easiest way to get the needed prerequisites to run DeepGuide is through conda. If you have conda installed already you can skip this step, otherwise go to [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html) to learn how to install conda on your system. We have used conda version 4.8.5. Higher version is expected to work. Once conda is correctly installed, You can run the following command to install requirements for DeepGuide
+
 ```
-conda activate DeepGuide
+conda create -n deepguide python=3.6.10 ipykernel matplotlib pandas=1.0.5 numpy=1.18.5 scipy=1.4.1 tensorflow=2.2.0 keras=2.4.3 scikit-learn=0.23.1 biopython=1.71
 ```
+
 ## Runing the software
 ### For cas12a
 Assuming you have installed the prerequisites in a conda environment called deepguide, you can run the software using for cas12a guides using following command
