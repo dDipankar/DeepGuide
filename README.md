@@ -32,7 +32,7 @@ context (1nt) -- PAM (4nt, TTTV) -- target (25nt) -- context (2nt)
 
 You will get an output file called activity_score_cas12a.csv in data directory. This file will contain the predicted cutting score by DeepGuide for each guide.
 
-### For cas9
+### For cas9(Sequence + Nucleosome Occupancy as input)
 You can run DeepGuide to get the prediction scores for cas9 guides using the sequence of guides and Nucleotide Occupancy by the following command
 
 ```
@@ -55,3 +55,10 @@ conda activate deepguide
 python DetectAndScore_cas12a.py ../data/seq_fa.fasta
 ```
 Then you will get an output file called activity_score_cas12a.csv in data directory.
+
+### For cas9(Sequence + Nucleosome Occupancy as input)
+
+```
+conda activate deepguide
+python DetectAndScore_cas9.py  ../data/seq_sample.fasta  ../data/nu_sample.csv
+```
