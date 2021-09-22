@@ -42,7 +42,7 @@ python DetectAndScore_cas9.py path_of_fasta_file path_of_NucleosomeOccupancy_fil
 See data/seq_sample.fasta for FASTA format. Just remember that the program needs at least 28 nucleotides to fit the full target.
 
 ```
-context (2nt) -- target (20nt) -- PAM (3nt, NGG) --  context (2nt)
+context (2nt) -- target (20nt) -- PAM (3nt, NGG) --  context (3nt)
 ```
 
 See data/nu_sample.csv for nucleosome occupancy file. Here each number in the file represents nucleosome occupancy for each nucleotide potition of the fasta file.
