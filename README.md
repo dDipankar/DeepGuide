@@ -62,3 +62,4 @@ Then you will get an output file called activity_score_cas12a.csv in data direct
 conda activate deepguide
 python DetectAndScore_cas9.py  ../data/seq_sample.fasta  ../data/nu_sample.csv
 ```
+Then you will get an output file called activity_score_cas9.csv in data directory
