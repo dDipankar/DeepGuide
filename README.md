@@ -18,19 +18,35 @@ conda create -n deepguide python=3.6.10 ipykernel matplotlib pandas=1.0.5 numpy=
 
 ## Runing the software
 ### For cas12a
-Assuming you have installed the prerequisites in a conda environment called deepguide, you can run the software using for cas12a guides using following command
+Assuming you have installed the prerequisites in a conda environment called deepguide, you can run the software for cas12a guides using following command
 
 ```
 conda activate deepguide
 python DetectAndScore_cas12a.py path_of_fasta_file
 ```
-See data/seq_fa.fasta for FASTA format. Just remember that the program needs at least 32 nucleotides to fit the full target.
+See data/seq_sample.fasta for FASTA format. Just remember that the program needs at least 32 nucleotides to fit the full target.
 
 ```
 context (1nt) -- PAM (4nt, TTTV) -- target (25nt) -- context (2nt)
 ```
 
 You will get an output file called activity_score_cas12a.csv in data directory. This file will contain the predicted cutting score by DeepGuide for each guide.
+
+### For cas9
+You can run DeepGuide to get the prediction scores for cas9 guides using the sequence of guides and Nucleotide Occupancy by the following command
+
+```
+conda activate deepguide
+python DetectAndScore_cas9.py path_of_fasta_file path_of_NucleosomeOccupancy_file
+```
+See data/seq_sample.fasta for FASTA format. Just remember that the program needs at least 28 nucleotides to fit the full target.
+
+```
+context (2nt) -- target (20nt) -- PAM (3nt, NGG) --  context (2nt)
+```
+
+See data/nu_sample.csv for nucleosome occupancy file. Here each number in the file represents nucleosome occupancy for each nucleotide potition of the fasta file.
+Remember that total number of nuclesome occupanies has to be equal the total number of nucleotides in the fasta file
 
 ## Example run
 ### For cas12a
