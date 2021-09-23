@@ -48,6 +48,13 @@ context (2nt) -- target (20nt) -- PAM (3nt, NGG) --  context (3nt)
 See data/nu_sample.csv for nucleosome occupancy file. Here each number in the file represents nucleosome occupancy for each nucleotide potition of the fasta file.
 Remember that total number of nuclesome occupanies has to be equal the total number of nucleotides in the fasta file
 
+### For cas9(Sequence only as input)
+To get prediction scores for cas9 guides using sequence only use the following command
+
+```
+conda activate deepguide
+python DetectAndScore_cas9.py path_of_fasta_file
+```
 ## Example run
 ### For cas12a
 ```
@@ -63,3 +70,11 @@ conda activate deepguide
 python DetectAndScore_cas9.py  ../data/seq_sample.fasta  ../data/nu_sample.csv
 ```
 Then you will get an output file called activity_score_cas9.csv in data directory
+
+### For cas9(Sequence only as input)
+```
+conda activate deepguide
+python DetectAndScore_cas9_seq.py  ../data/seq_sample.fasta
+```
+Then you will get an output file called activity_score_cas9_seq.csv in data directory
+
