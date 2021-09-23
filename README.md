@@ -78,3 +78,6 @@ python DetectAndScore_cas9_seq.py  ../data/seq_sample.fasta
 ```
 Then you will get an output file called activity_score_cas9_seq.csv in data directory
 
+## Citation
+If you have used this tool in your publication please cite this
+**Genome-wide functional screens enable the prediction of high activity CRISPR-Cas9 and -Cas12a guides in *Yarrowia lipolytica***. Dipankar Baisya, Adithya Ramesh, Cory Schwartz, Stefano Lonardi, and Ian Wheeldon. Submitted
