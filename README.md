@@ -59,7 +59,7 @@ python DetectAndScore_cas9.py path_of_fasta_file
 ### For cas12a
 ```
 conda activate deepguide
-python DetectAndScore_cas12a.py ../data/seq_fa.fasta
+python DetectAndScore_cas12a.py ../data/seq_sample.fasta
 ```
 Then you will get an output file called activity_score_cas12a.csv in data directory.
 
