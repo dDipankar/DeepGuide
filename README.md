@@ -39,14 +39,15 @@ You can run DeepGuide to get the prediction scores for cas9 guides using the seq
 conda activate deepguide
 python DetectAndScore_cas9.py path_of_fasta_file path_of_NucleosomeOccupancy_file
 ```
-See data/seq_sample.fasta for FASTA format. Just remember that the program needs at least 28 nucleotides to fit the full target.
+See data/seq_sample.fasta for FASTA format. Just remember that the program needs at least 28 nucleotides to fit the full target. 
+See data/nu_sample.csv for nucleosome occupancy file. Here each number in the file represents nucleosome occupancy for each nucleotide potition of the fasta file.
+Remember that total number of nuclesome occupanies has to be equal the total number of nucleotides in the fasta file
+
 
 ```
 context (2nt) -- target (20nt) -- PAM (3nt, NGG) --  context (3nt)
 ```
 
-See data/nu_sample.csv for nucleosome occupancy file. Here each number in the file represents nucleosome occupancy for each nucleotide potition of the fasta file.
-Remember that total number of nuclesome occupanies has to be equal the total number of nucleotides in the fasta file
 
 ### For cas9(only Sequence as Input)
 To get prediction scores for cas9 guides using sequence only use the following command
