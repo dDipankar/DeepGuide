@@ -21,6 +21,8 @@ conda create -n deepguide python=3.6.10 ipykernel matplotlib pandas=1.0.5 numpy=
 Assuming you have installed the prerequisites in a conda environment called deepguide, you can run the software for cas12a guides using following command
 
 ```
+git clone https://github.com/dDipankar/DeepGuide
+cd DeepGuide/src/
 conda activate deepguide
 python DetectAndScore_cas12a.py path_of_fasta_file
 ```
@@ -53,12 +55,16 @@ context (2nt) -- target (20nt) -- PAM (3nt, NGG) --  context (3nt)
 To get prediction scores for cas9 guides using sequence only use the following command
 
 ```
+git clone https://github.com/dDipankar/DeepGuide
+cd DeepGuide/src/
 conda activate deepguide
 python DetectAndScore_cas9.py path_of_fasta_file
 ```
 ## Example run
 ### For cas12a
 ```
+git clone https://github.com/dDipankar/DeepGuide
+cd DeepGuide/src/
 conda activate deepguide
 python DetectAndScore_cas12a.py ../data/seq_sample.fasta
 ```
@@ -67,6 +73,8 @@ Then you will get an output file called activity_score_cas12a.csv in data direct
 ### For cas9(Sequence + Nucleosome Occupancy as Input)
 
 ```
+git clone https://github.com/dDipankar/DeepGuide
+cd DeepGuide/src/
 conda activate deepguide
 python DetectAndScore_cas9.py  ../data/seq_sample.fasta  ../data/nu_sample.csv
 ```
@@ -74,6 +82,8 @@ Then you will get an output file called activity_score_cas9.csv in data director
 
 ### For cas9(only Sequence as Input)
 ```
+git clone https://github.com/dDipankar/DeepGuide
+cd DeepGuide/src/
 conda activate deepguide
 python DetectAndScore_cas9_seq.py  ../data/seq_sample.fasta
 ```
