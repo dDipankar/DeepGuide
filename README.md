@@ -38,6 +38,8 @@ You will get an output file called activity_score_cas12a.csv in data directory. 
 You can run DeepGuide to get the prediction scores for cas9 guides using the sequence of guides and Nucleotide Occupancy by the following command
 
 ```
+git clone https://github.com/dDipankar/DeepGuide
+cd DeepGuide/src/
 conda activate deepguide
 python DetectAndScore_cas9.py path_of_fasta_file path_of_NucleosomeOccupancy_file
 ```
