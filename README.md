@@ -70,7 +70,12 @@ cd DeepGuide/src/
 conda activate deepguide
 python DetectAndScore_cas12a.py ../data/seq_sample.fasta
 ```
-Then you will get an output file called activity_score_cas12a.csv in data directory.
+Then you will get an output file called activity_score_cas12a.csv in data directory. The format of the output is bellow:
+
+| Guide  | Score |
+| ------------- | ------------- |
+| CTACCCGATATCTGTCACAGTCGTT  | 1.9962865114212036  |
+| ACGACCCCAAGCTGACCGATGACTC  | 1.2889682054519653  |
 
 ### For cas9(Sequence + Nucleosome Occupancy as Input)
 
@@ -80,7 +85,11 @@ cd DeepGuide/src/
 conda activate deepguide
 python DetectAndScore_cas9.py  ../data/seq_sample.fasta  ../data/nu_sample.csv
 ```
-Then you will get an output file called activity_score_cas9.csv in data directory
+Then you will get an output file called activity_score_cas9.csv in data directory. The format of the output is same as before.
+| Guide  | Score |
+| ------------- | ------------- |
+| TCAAACGATTACCCACCCTC  | 3.4991283416748047  |
+| TTACCCACCCTCCGGGACTG  | 4.1370463371276855  |
 
 ### For cas9(only Sequence as Input)
 ```
@@ -89,8 +98,7 @@ cd DeepGuide/src/
 conda activate deepguide
 python DetectAndScore_cas9_seq.py  ../data/seq_sample.fasta
 ```
-Then you will get an output file called activity_score_cas9_seq.csv in data directory
-
+Then you will get an output file called activity_score_cas9_seq.csv in data directory. The format of the output is same as above
 ## Citation
 If you have used this tool in your publication please cite this
 
