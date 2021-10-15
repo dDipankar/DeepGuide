@@ -16,7 +16,7 @@ The easiest way to get the needed prerequisites to run DeepGuide is through Anac
 conda create -n deepguide python=3.6.10 ipykernel matplotlib pandas=1.0.5 numpy=1.18.5 scipy=1.4.1 tensorflow=2.2.0 keras=2.4.3 scikit-learn=0.23.1 biopython=1.71
 ```
 
-## Runing the software
+## Running the software
 ### For cas12a
 Assuming you have installed the prerequisites in a conda environment called deepguide, you can run the software for cas12a guides using following command
 
