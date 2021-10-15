@@ -1,0 +1,38 @@
+Generation of sgRNA counts for a sample in a Genome-wide CRISPR screen:
+
+The generation of sgRNA counts is done using two methods:
+1. Naive Exact Matching (NEM)
+2. Inexact Matching (using Bowtie2)
+
+The benefits to doing NEM is that it is simple, and only needs a list of sgRNA in your library along with the NGS reads file for which you want to generate sgRNA counts. The disadvantages, are that it can be time consuming (runtime can be reduced by parallel computing on the cluster), and has the inherent disadvantage that exact matching cannot account for mismatches due to errors during PCR and/or by the Illumina sequencer. Therefore we have observed it generates ~10% lesser total counts than what Inexact Matching is capable of (internal data).
+
+The benefits to doing Inexact Matching as mentioned above is that it can account for errors during PCR and/or by the Illumina sequencer. Since this method relies on generating genomic start positions for the list of sgRNA within out library and then comparing these to the genomic start positions of the Illumina reads for any given sample, it can also be done faster than NEM. However, there is more data processing to be done (such as adding an extra chromosome with the nontargeting sgRNA so that we can align them using Bowtie2, generating genomic start positions of the sgRNA within out library, running bowtie2 on the usegalaxy server or locally on commandline). As well, Bowtie2 was designed for alginment of mRNA-seq data against the genome is generally great at handling longer sequences but may make more errors in aligning shorter sequences as is typical for CRISPR screens (sgRNAs are typically only 20-25 nt long as against mRNA fragments which are longer). However, we have observed that the Bowtie counts are typically greater than the NEM counts for a vast majority of the sgRNA and this is generally a good method used in various CRISPR data analysis pipelines.
+
+We decided to use a combination of exact and inexact matching. We generate both NEM and Bowtie counts, and in the minority of cases where Bowtie counts are less than NEM counts (which automatically indicates incorrect alignment by Bowtie, as exact matching should provide the minimum number of matches we should be getting for any sgRNA), we switch those values around to have the NEM counts instead of the Bowtie counts for that sgRNA.
+
+
+To generate NEM counts for a given sample, please execute the scripts in the following order:
+
+(1) Import_fastq.m
+(2) Naive_Exact_Matching_NEM.m
+
+To generate Bowtie counts for a given sample, please execute the scripts in the following order:
+
+(1) **Determine_sgRNA_Position.m
+(2) Inexact_Matching_Bowtie.m
+
+**- Determine_sgRNA_Position.m only needs to be run once for any given library. Since the puropose of this file is to generate genomic start positions for all sgRNA in a library, it works for all experiments done with the same library. Beyond this, the output file of sgRNA start positions can simply be loaded when running Inexact_Matching_Bowtie.m for each sample. 
+
+Finally to generate the final counts for a given sample run:
+(1) NEM_Bowtie_counts_reconcile.m
+
+
+Note: The genomic fasta file containing the extra chromosome containing nontargeting sgRNA has been provided within this same folder.
+Note2: The output of Determine_sgRNA_Position.m for the Cas12a library has been provided as the MATLAB variable All_sgRNA_pos.mat.
+Note3: Further details about inputs and outputs and dependencies are mentioned within the scripts.
+
+Author: Adithya Ramesh
+PhD Candidate, Wheeldon Lab
+UC Riverside, 900 University Ave
+Riverside, CA-92507, USA
+Email: arame003@ucr.edu
