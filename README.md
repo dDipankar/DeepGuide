@@ -102,6 +102,6 @@ Then you will get an output file called activity_score_cas9_seq.csv in data dire
 ## Citation
 If you have used this tool in your publication please cite this
 
-**Genome-wide functional screens enable the prediction of high activity CRISPR-Cas9 and -Cas12a guides in *Yarrowia lipolytica***. Dipankar Baisya, Adithya Ramesh, Cory Schwartz, Stefano Lonardi, and Ian Wheeldon. Submitted
+**Genome-wide functional screens enable the prediction of high activity CRISPR-Cas9 and -Cas12a guides in *Yarrowia lipolytica***. Dipankar Baisya, Adithya Ramesh, Cory Schwartz, Stefano Lonardi, and Ian Wheeldon. Nature Communication, 2022
 
 [![DOI](https://zenodo.org/badge/404852665.svg)](https://zenodo.org/badge/latestdoi/404852665)
