@@ -93,13 +93,13 @@ def one_hot_encoding(lines):
         seq = lines[l]
         for i in range(28):
             if seq[i] in "Aa":
-                SEQ[l-1, i, 0] = 1
+                SEQ[l, i, 0] = 1
             elif seq[i] in "Cc":
-                SEQ[l-1, i, 1] = 1
+                SEQ[l, i, 1] = 1
             elif seq[i] in "Gg":
-                SEQ[l-1, i, 2] = 1
+                SEQ[l, i, 2] = 1
             elif seq[i] in "Tt":
-                SEQ[l-1, i, 3] = 1
+                SEQ[l, i, 3] = 1
 
     return SEQ
 
