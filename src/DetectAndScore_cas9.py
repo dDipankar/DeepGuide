@@ -74,7 +74,7 @@ def detect_guides_cas9(fastaseq, occupancy_list = []):
 
     for g in guides_20_r:
         if ff_c.find(g)>=0:
-            ind.append(ff_c.find(g))
+            ind.append(ff.find(str(Seq(g).reverse_complement())))
 
     for e in ind:
         df_sub = occupancy_list[e:e+20]
