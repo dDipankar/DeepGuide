@@ -99,6 +99,11 @@ conda activate deepguide
 python DetectAndScore_cas9_seq.py  ../data/seq_sample.fasta
 ```
 Then you will get an output file called activity_score_cas9_seq.csv in data directory. The format of the output is same as above
+
+### For cas9(only Sequence as Input)
+If one needs the version that was used to generate the scores used for Figure 5 in the paper, they can download that older version from DeepGuide_v0.9/saved_weights.
+
+
 ## Citation
 If you have used this tool in your publication please cite this
 
